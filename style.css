@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 48px 0;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  background-image: linear-gradient(45deg, #7c9885, #b5b682);
+  min-height: 100vh;
+}
+
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+article {
+  box-shadow: none;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.learn-button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 17px 48px;
+  color: var(--bright-orange);
+  background-color: var(--very-light-gray);
+  height: 48px;
+  margin-top: 5rem;
+}
+
+figure {
+  margin: 2rem;
+  padding: 1rem;
+}
+
+article img {
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+article h2 {
+  margin: 0 0 18px 0;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  transition: color 0.3s ease-out;
+}
+
+article p {
+  margin-top: 2rem;
+  color: var(--transparent-white);
+}
+
+.article-body {
+  padding: 24px;
+}
